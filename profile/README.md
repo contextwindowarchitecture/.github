@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>...</strong>
+  <strong>provides the "why" and "what" that should inform the "how" of context engineering</strong>
 </p>
 
 <p align="center">
