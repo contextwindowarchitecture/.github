@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="...">Documentation</a> |
+  <a href="https://github.com/context-window-architecture/toolkit">Toolkit</a> |
   <a href="...">Specification</a> |
   <a href="https://github.com/orgs/context-window-architecture/discussions">Discussions</a>
 </p>
