@@ -13,7 +13,7 @@
   <a href="https://contextwindowarchitecture.io/spec.html"><img src="assets/badges/spec-draft.svg" alt="Spec: draft" height="22"></a>
   <a href="https://contextwindowarchitecture.io"><img src="assets/badges/website.svg" alt="Website: contextwindowarchitecture.io" height="22"></a>
   <a href="https://github.com/contextwindowarchitecture/contextwindowarchitecture/blob/main/LICENSE"><img src="assets/badges/license-apache.svg" alt="License: Apache 2.0" height="22"></a>
-  <a href="https://github.com/orgs/contextwindowarchitecture/discussions"><img src="assets/badges/discussions.svg" alt="Discussions" height="22"></a>
+  <a href="https://github.com/contextwindowarchitecture/contextwindowarchitecture/discussions"><img src="assets/badges/discussions.svg" alt="Discussions" height="22"></a>
 </p>
 
 <p align="center">
@@ -66,8 +66,8 @@ flowchart LR
 
 | Repository | What it holds |
 | --- | --- |
-| [contextwindowarchitecture](https://github.com/contextwindowarchitecture/contextwindowarchitecture) | The specification on its own: the text, JSON Schemas, contract data and conformance cases |
-| [website](https://github.com/contextwindowarchitecture/website) | [contextwindowarchitecture.io](https://contextwindowarchitecture.io), where the spec is authored, with guides, evidence and browser tools. Issues about the spec go here |
+| [contextwindowarchitecture](https://github.com/contextwindowarchitecture/contextwindowarchitecture) | The specification on its own: the text, JSON Schemas, contract data and conformance cases. Issues, pull requests and discussions about the spec go here |
+| [website](https://github.com/contextwindowarchitecture/website) | [contextwindowarchitecture.io](https://contextwindowarchitecture.io): the spec with guides, evidence and browser tools |
 | [assembler-python](https://github.com/contextwindowarchitecture/assembler-python) | The reference assembler |
 | [assembler-typescript](https://github.com/contextwindowarchitecture/assembler-typescript), [assembler-go](https://github.com/contextwindowarchitecture/assembler-go), [assembler-rust](https://github.com/contextwindowarchitecture/assembler-rust) | Assemblers in other languages, passing the same conformance cases |
 | [assembler-template](https://github.com/contextwindowarchitecture/assembler-template) | A starting point for an assembler in a new language |
@@ -83,4 +83,4 @@ Every conformant assembler publishes a conformance report; the [Assembler page](
 - **Adopt it:** follow [Getting started](https://contextwindowarchitecture.io/start.html) to go from an existing prompt to a first assembled payload.
 - **Write a producer:** read the [producer guide](https://contextwindowarchitecture.io/producers.html).
 - **Port an assembler:** begin from [assembler-template](https://github.com/contextwindowarchitecture/assembler-template) and run the conformance cases.
-- **Ask or propose:** use [Discussions](https://github.com/orgs/contextwindowarchitecture/discussions), or open an issue in [website](https://github.com/contextwindowarchitecture/website/issues).
+- **Ask or propose:** start a [discussion](https://github.com/contextwindowarchitecture/contextwindowarchitecture/discussions), open an [issue](https://github.com/contextwindowarchitecture/contextwindowarchitecture/issues) or send a [pull request](https://github.com/contextwindowarchitecture/contextwindowarchitecture/pulls) in the spec repository.
