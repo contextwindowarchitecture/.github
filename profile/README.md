@@ -10,17 +10,17 @@
 </p>
 
 <p align="center">
-  <a href="https://contextwindowarchitecture.io/spec.html"><img src="assets/badges/spec-draft.svg" alt="Spec: draft"></a>
-  <a href="https://contextwindowarchitecture.io"><img src="assets/badges/website.svg" alt="Website: contextwindowarchitecture.io"></a>
-  <a href="https://github.com/contextwindowarchitecture/contextwindowarchitecture/blob/main/LICENSE"><img src="assets/badges/license-apache.svg" alt="License: Apache 2.0"></a>
-  <a href="https://github.com/orgs/contextwindowarchitecture/discussions"><img src="assets/badges/discussions.svg" alt="Discussions"></a>
+  <a href="https://contextwindowarchitecture.io/spec.html"><img src="assets/badges/spec-draft.svg" alt="Spec: draft" height="22"></a>
+  <a href="https://contextwindowarchitecture.io"><img src="assets/badges/website.svg" alt="Website: contextwindowarchitecture.io" height="22"></a>
+  <a href="https://github.com/contextwindowarchitecture/contextwindowarchitecture/blob/main/LICENSE"><img src="assets/badges/license-apache.svg" alt="License: Apache 2.0" height="22"></a>
+  <a href="https://github.com/orgs/contextwindowarchitecture/discussions"><img src="assets/badges/discussions.svg" alt="Discussions" height="22"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/contextwindowarchitecture/assembler-python"><img src="assets/badges/assembler-python.svg" alt="Assembler: Python"></a>
-  <a href="https://github.com/contextwindowarchitecture/assembler-typescript"><img src="assets/badges/assembler-typescript.svg" alt="Assembler: TypeScript"></a>
-  <a href="https://github.com/contextwindowarchitecture/assembler-go"><img src="assets/badges/assembler-go.svg" alt="Assembler: Go"></a>
-  <a href="https://github.com/contextwindowarchitecture/assembler-rust"><img src="assets/badges/assembler-rust.svg" alt="Assembler: Rust"></a>
+  <a href="https://github.com/contextwindowarchitecture/assembler-python"><img src="assets/badges/assembler-python.svg" alt="Assembler: Python" height="22"></a>
+  <a href="https://github.com/contextwindowarchitecture/assembler-typescript"><img src="assets/badges/assembler-typescript.svg" alt="Assembler: TypeScript" height="22"></a>
+  <a href="https://github.com/contextwindowarchitecture/assembler-go"><img src="assets/badges/assembler-go.svg" alt="Assembler: Go" height="22"></a>
+  <a href="https://github.com/contextwindowarchitecture/assembler-rust"><img src="assets/badges/assembler-rust.svg" alt="Assembler: Rust" height="22"></a>
 </p>
 
 Context Window Architecture (CWA) is a draft specification for assembling every model call from **typed slots**. It treats a model request as compiled output rather than a string you concatenate: producers propose items, the application freezes them into a snapshot, and an assembler turns that snapshot into the request plus a trace of what was sent, what was left out and why. Assembly is deterministic and never calls a model, so what reaches the model can be reviewed, tested and replayed.
