@@ -74,7 +74,7 @@ flowchart LR
 | [examples](https://github.com/contextwindowarchitecture/examples) | Runnable Python apps, from a help-center bot to a production-shaped agent, each shown before and after CWA |
 | [assembler-demo](https://github.com/contextwindowarchitecture/assembler-demo) | An inspector that runs the same snapshots through all four assemblers and shows every decision |
 
-Every conformant assembler publishes a conformance report; the [Assembler page](https://contextwindowarchitecture.io/assembler.html) shows them side by side. All repositories release under one shared tag name, and while the spec is a draft the `draft-release` tag moves to each new export.
+Every conformant assembler publishes a conformance report; the [Assembler page](https://contextwindowarchitecture.io/assembler.html) shows them side by side. All repositories release under one shared tag name, and while the spec is a draft the `draft-release` tag moves with each change.
 
 ## Getting started
 
