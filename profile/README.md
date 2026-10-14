@@ -67,20 +67,23 @@ flowchart LR
 | Repository | What it holds |
 | --- | --- |
 | [contextwindowarchitecture](https://github.com/contextwindowarchitecture/contextwindowarchitecture) | The specification on its own: the text, JSON Schemas, contract data and conformance cases. Issues, pull requests and discussions about the spec go here |
-| [website](https://github.com/contextwindowarchitecture/website) | [contextwindowarchitecture.io](https://contextwindowarchitecture.io): the spec with guides, evidence and browser tools |
+| [website](https://github.com/contextwindowarchitecture/website) | [contextwindowarchitecture.io](https://contextwindowarchitecture.io): the spec, a live assembly simulator and the placement evidence |
 | [assembler-python](https://github.com/contextwindowarchitecture/assembler-python) | The reference assembler |
 | [assembler-typescript](https://github.com/contextwindowarchitecture/assembler-typescript), [assembler-go](https://github.com/contextwindowarchitecture/assembler-go), [assembler-rust](https://github.com/contextwindowarchitecture/assembler-rust) | Assemblers in other languages, passing the same conformance cases |
 | [assembler-template](https://github.com/contextwindowarchitecture/assembler-template) | A starting point for an assembler in a new language |
 | [examples](https://github.com/contextwindowarchitecture/examples) | Runnable Python apps, from a help-center bot to a production-shaped agent, each shown before and after CWA |
 | [assembler-demo](https://github.com/contextwindowarchitecture/assembler-demo) | An inspector that runs the same snapshots through all four assemblers and shows every decision |
+| [integrations](https://github.com/contextwindowarchitecture/integrations) | CWA put inside systems that already exist: the producers each would write, the policy it would version and what its model would receive |
+| [workshop](https://github.com/contextwindowarchitecture/workshop) | Hands-on workshops that teach each CWA role in order, every lab runnable without a model |
+| [benchmark](https://github.com/contextwindowarchitecture/benchmark), [benchmark-ui](https://github.com/contextwindowarchitecture/benchmark-ui) | The viability benchmark harness and its results site, [benchmark.contextwindowarchitecture.io](https://benchmark.contextwindowarchitecture.io) |
 
-Every conformant assembler publishes a conformance report; the [Assembler page](https://contextwindowarchitecture.io/assembler.html) shows them side by side. All repositories release under one shared tag name, and while the spec is a draft the `draft-release` tag moves with each change.
+Every conformant assembler publishes a conformance report, listed in the spec repository's [implementations](https://github.com/contextwindowarchitecture/contextwindowarchitecture/tree/main/implementations) directory. All repositories release under one shared tag name, and while the spec is a draft the `draft-release` tag moves with each change.
 
 ## Getting started
 
 - **Learn the model:** start at [contextwindowarchitecture.io](https://contextwindowarchitecture.io), then read the [specification](https://contextwindowarchitecture.io/spec.html).
-- **See it work:** run [01-docs-qa](https://github.com/contextwindowarchitecture/examples/tree/main/01-docs-qa). No API key is needed to see what would be sent.
-- **Adopt it:** follow [Getting started](https://contextwindowarchitecture.io/start.html) to go from an existing prompt to a first assembled payload.
-- **Write a producer:** read the [producer guide](https://contextwindowarchitecture.io/producers.html).
+- **See it work:** run [01-docs-qa](https://github.com/contextwindowarchitecture/examples/tree/main/01-docs-qa). No API key is needed to see what would be sent. The [showcase](https://examples.contextwindowarchitecture.io) shows every example run on a list of models, and the [Assembler page](https://contextwindowarchitecture.io/assembler.html#assemble) assembles one in the browser.
+- **Adopt it:** read the [assembler guide](https://github.com/contextwindowarchitecture/contextwindowarchitecture/blob/main/guides/assemblers.md) to go from a frozen snapshot to a payload and its trace.
+- **Write a producer:** read the [producer guide](https://github.com/contextwindowarchitecture/contextwindowarchitecture/blob/main/guides/producers.md).
 - **Port an assembler:** begin from [assembler-template](https://github.com/contextwindowarchitecture/assembler-template) and run the conformance cases.
 - **Ask or propose:** start a [discussion](https://github.com/contextwindowarchitecture/contextwindowarchitecture/discussions), open an [issue](https://github.com/contextwindowarchitecture/contextwindowarchitecture/issues) or send a [pull request](https://github.com/contextwindowarchitecture/contextwindowarchitecture/pulls) in the spec repository.
