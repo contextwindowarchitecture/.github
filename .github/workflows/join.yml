@@ -1,0 +1,58 @@
+# Self-join: the website's Join icon opens a new issue here titled "Join the organization".
+# This workflow invites the issue's author to the organization, replies, and closes the issue.
+#
+# Needs the secret ORG_INVITE_TOKEN: a fine-grained token owned by an organization owner, resource owner
+# contextwindowarchitecture, organization permission "Members: Read and write", no repository access.
+# The organization's base permission is "No permission", so membership grants no repository access.
+#
+# The title is matched exactly. A title is the only input, so this repo carries no issue template: a template here
+# would become the default for every organization repository that has none of its own.
+name: Join
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  invite:
+    if: github.event.issue.title == 'Join the organization' && github.event.issue.user.type == 'User'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invite the author
+        id: invite
+        env:
+          GH_TOKEN: ${{ secrets.ORG_INVITE_TOKEN }}
+          ORG: ${{ github.repository_owner }}
+          AUTHOR: ${{ github.event.issue.user.login }}
+        run: |
+          set -o pipefail
+          if state=$(gh api "orgs/$ORG/memberships/$AUTHOR" --jq .state 2>/dev/null) && [ "$state" = active ]; then
+            echo "result=member" >> "$GITHUB_OUTPUT"
+          elif gh api --method PUT "orgs/$ORG/memberships/$AUTHOR" -f role=member --jq .state; then
+            echo "result=invited" >> "$GITHUB_OUTPUT"
+          else
+            echo "result=failed" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Reply and close
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ORG: ${{ github.repository_owner }}
+          ISSUE: ${{ github.event.issue.number }}
+          AUTHOR: ${{ github.event.issue.user.login }}
+          RESULT: ${{ steps.invite.outputs.result }}
+        run: |
+          case "$RESULT" in
+            member)
+              gh issue comment "$ISSUE" --repo "$REPO" --body "@$AUTHOR, you are already a member of $ORG."
+              gh issue close "$ISSUE" --repo "$REPO" --reason completed ;;
+            invited)
+              gh issue comment "$ISSUE" --repo "$REPO" --body "@$AUTHOR, an invitation is on its way. Accept it at https://github.com/orgs/$ORG/invitation to join."
+              gh issue close "$ISSUE" --repo "$REPO" --reason completed ;;
+            *)
+              gh issue comment "$ISSUE" --repo "$REPO" --body "@$AUTHOR, the invitation could not be sent automatically. A maintainer will send it by hand and close this issue." ;;
+          esac
